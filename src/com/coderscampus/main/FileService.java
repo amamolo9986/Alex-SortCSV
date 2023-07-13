@@ -37,10 +37,10 @@ public class FileService {
 	}
 
 	public void writeStudentsToFile(Student[] students, String fileName) throws IOException {
-		try(BufferedWriter outputWriter = new BufferedWriter(new FileWriter(fileName))){
+		try (BufferedWriter outputWriter = new BufferedWriter(new FileWriter(fileName))) {
 			outputWriter.write("Student ID" + ", Student Name" + ", Course" + ", Grade\n");
-			
-			for(int i = 0; i < students.length; i++) {
+
+			for (int i = 0; i < students.length; i++) {
 				outputWriter.write(students[i] + "");
 				outputWriter.newLine();
 			}

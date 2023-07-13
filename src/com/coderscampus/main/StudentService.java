@@ -27,15 +27,14 @@ public class StudentService {
 				statArray[s++] = student;
 			}
 		}
-		assignStudentsToSpecificFile(compsciArray, "course1.csv");
-		assignStudentsToSpecificFile(apmthArray, "course2.csv");
-		assignStudentsToSpecificFile(statArray, "course3.csv");
+		assignStudentsToCourseFile(compsciArray, "course1.csv");
+		assignStudentsToCourseFile(apmthArray, "course2.csv");
+		assignStudentsToCourseFile(statArray, "course3.csv");
 	}
-	
-	public void assignStudentsToSpecificFile(Student[] students, String fileName) throws IOException {
+
+	public void assignStudentsToCourseFile(Student[] students, String fileName) throws IOException {
 		FileService fileService = new FileService();
 		fileService.writeStudentsToFile(students, fileName);
 	}
-	
 
 }
